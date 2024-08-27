@@ -5,20 +5,20 @@ import { decl } from 'postcss';
 
 declare module 'next-auth' {
     interface User{
-        user: {
+    
             id?: string;
             isVerified?: boolean;
             isAcceptingMessage?: boolean;
             username?: string;
-        } & DefaultJWT['user']
- }
+    }
+       
  interface Session{
     user: {
         id?: string;
         isVerified?: boolean;
         isAcceptingMessage?: boolean;
         username?: string;
-    } & DefaultSession['user']
+    } 
  }
 }
 
